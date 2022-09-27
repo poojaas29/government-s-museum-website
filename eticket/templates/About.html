@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/About.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Footer.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Navbar.css'%}">
+    <style>
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+
+        .button1:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="" class="logo"><img src="{% static 'Images/logo.png' %}"></a>
+            <div class="nav__link hide">
+                <a href="../">home</a>
+                {% if user.is_authenticated %}
+                <a href="../services">services</a>
+                <a class="button button1" href="../logout">Logout</button></a>
+                {% else %}
+                <a class="button button1" href="../register">Login</button></a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="image">
+            <img src="{% static 'Images/museum.jpg' %}">
+
+            <br>
+        </div>
+        <div class="content">
+            <h2>About Us</h2>
+            <span>
+                <!-- line here -->
+            </span>
+            <p>The rich heritage of India, one of the world’s oldest civilizations, is an all-embracing confluence of
+                religions, traditions and customs. The highlights of Indian heritage lie in the treasure of its art,
+                architecture, classical dance, music, flora and fauna, and the innate secular philosophy of its people.
+                A visit to the heritage sites is like a walk through history, changing lanes with every dynasty that
+                ruled Indian soils. </p>
+            <ul class="links">
+                <li><a href="../">home</a></li>
+                <div class="vertical-line"></div>
+                {% if user.is_authenticated %}
+                <li><a href="../services">Services</a></li>
+                {% endif %}
+                <div class="vertical-line"></div>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <ul class="icons">
+                <li>
+                    <a href="www.twitter.com"></a><i class="fa fa-twitter"></i>
+                </li>
+                <li>
+                    <a href="www.facebook.com"></a><i class="fa fa-facebook"></i>
+                </li>
+                <li>
+                    <a href="www.github.com"></a><i class="fa fa-github"></i>
+                </li>
+                <li>
+                    <a href="www.pinterest.com"></a><i class="fa fa-pinterest"></i>
+                </li>
+            </ul>
+        </div>
+    </section><br><br>
+
+</body>
+
+</html>

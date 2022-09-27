@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+
+    <title>Ticket</title>\
+    <link rel="stylesheet" href="{% static 'css/eticket.css'%}" </head>
+
+<body>
+    <div class="cardWrap">
+        <div class="card cardLeft">
+            <h1>Museum <span>Ticket</span></h1>
+            <div class="title">
+                <h2>abc</h2>
+                <span>Museum</span>
+            </div>
+            <div class="name">
+                <h2>jk</h2>
+                <span>name</span>
+
+            </div>
+            <div class="date">
+                <h2>689</h2>
+                <span>date</span>
+            </div>
+            <div class="seat">
+                <h2>9</h2>
+                <span>number of ticket</span>
+            </div>
+            <div class="time">
+                <h2>5:30</h2>
+                <span>time slot</span>
+            </div>
+
+        </div>
+        <div class="card cardRight">
+            <div class="eye"></div>
+            <div class="number">
+                <h3>ko</h3>
+                <span>Ticket ID</span>
+            </div>
+            <!-- <div class="qr">
+                {%block conte%} import qrcode
+                import png
+                a="ABC"
+
+                img=qrcode.make(a)
+                name="images/"+str(a)+".png"
+
+                img.save(name,"png"){%%} -->
+
+
+
+
+            <img src="{% static 'code/{{qcode}}' %}" height="100rem">
+            </style>
+
+        </div>
+    </div>
+
+    </div>
+    <div id="elementH">
+        <script src="ticket.js"></script>
+    </div>
+
+</body>
+
+</html>

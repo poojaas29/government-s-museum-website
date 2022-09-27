@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/Register.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Navbar.css'%}">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="../" class="logo"><img src="{% static 'Images/logo.png' %}"></a>
+            <div class="nav__link hide">
+                <a href="../">home</a>
+                <a href="../about">about</a>
+            </div>
+        </nav>
+    </header>
+    <div class="cotn_principal">
+        <div class="cont_centrar">
+
+            <div class="cont_login">
+                <br>
+                {% if error %}
+                <h4 style="font-size: 20px; color: blanchedalmond; font-style: bold;">
+                    {{error|escape}}
+                </h4>
+                {% endif %}
+                <div class="cont_info_log_sign_up">
+                    <div class="col_md_login">
+
+                        <div class="cont_ba_opcitiy">
+
+                            <h2>LOGIN</h2>
+                            <p>WELCOME BACK!!</p>
+                            <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                        </div>
+                    </div>
+                    <div class="col_md_sign_up">
+                        <div class="cont_ba_opcitiy">
+                            <h2>REGISTER</h2>
+
+
+                            <p>Don't have an account? Sign up here</p>
+
+                            <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="cont_back_info">
+                    <div class="cont_img_back_grey">
+                        <img src="{% static 'Images/registerbg.jpg' %}" alt="" />
+                    </div>
+
+                </div>
+                <div class="cont_forms">
+                    <div class="cont_img_back_">
+                        <img src="{% static 'Images/registerbg.jpg' %}" alt="" />
+                    </div>
+                    <form method="post" action="{% url 'login' %}" class="cont_form_login">
+                        {% csrf_token %}
+                        <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                        <h2>LOGIN</h2>
+                        <input type="text" placeholder="Username" name="username" id="id_username" />
+                        <input type="password" placeholder="Password" name="password" id="id_password" />
+                        <button type="submit" class="btn_login" onclick="cambiar_login()">LOGIN</button>
+
+                    </form>
+
+                    <form method="post" action="{% url 'register' %}" class="cont_form_sign_up">
+                        {% csrf_token %}
+                        <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                        <h2>SIGN UP</h2>
+                        <input type="text" placeholder="Email" name="email" id="id_email" />
+                        <input type="text" placeholder="Username" name="username" id="id_username" />
+                        <input type="number" placeholder="Phone Number" name="phone" id="id_phone" />
+                        <input type="text" placeholder="Address" name="address" id="id_address" />
+                        <input type="text" placeholder="Nationality" name="nationality" id="id_nationality" />
+                        <input type="date" placeholder="DoB" name="dob" id="id_dob" /><br>
+                        <select name="gender" id="gender-select" id="id_gender">
+                            <option value="">--Gender--</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                            <option value="pns">Prefer not to say</option>
+                        </select>
+                        <input type="password" placeholder="Password" name="password" id="id_password" />
+                        <button class="btn_sign_up" onclick="cambiar_sign_up()" type="submit">SIGN UP</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/Register.js'%}"></script>
+    <div class="footer">
+        <p>Footer</p>
+        Copyright ©-All rights are reserved
+
+    </div>
+</body>
+
+</html>

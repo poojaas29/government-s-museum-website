@@ -1,0 +1,59 @@
+a {
+    text-decoration: none;
+    color: rgb(31, 20, 20);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .logo {
+    margin-left: 20px;
+    font-size: 1.8rem;
+    color: rgb(233, 143, 24);
+    
+  }
+
+  
+  .nav__link {
+    position: fixed;
+    width: 94%;
+    top: 5rem;
+    left: 18px;
+    background-color: black;
+  }
+  
+  .nav__link a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .nav__link a:hover {
+    background-color: rgb(233, 143, 24);
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .nav__link {
+      display: block;
+      position: static;
+      width: auto;
+      margin-right: 20px;
+      background: none;
+    }
+  
+    .nav__link a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+  
+}

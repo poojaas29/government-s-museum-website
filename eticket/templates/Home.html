@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <!--<title> Responsive Footer | CodingLab</title>--->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'css/Home.css'%}">
+  <link rel="stylesheet" href="{% static 'css/Navbar.css'%}">
+  <link rel="stylesheet" href="{% static 'css/Footer.css'%}">
+
+
+
+  <title>Museum&HeritageSite</title>
+
+  <style>
+    .button {
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: white;
+      color: black;
+      border: 2px solid #4CAF50;
+    }
+
+    .button1:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <a href="./" class="logo"><img src="{% static 'Images/logo.png' %}"></a>
+      <div class="nav__link hide">
+        <a href="./">home</a>
+        <a href="./about">about</a>
+        {% if user.is_authenticated %}
+        <a href="./services">services</a>
+        <a class="button button1" href="./logout">Logout</button></a>
+        {% else %}
+        <a class="button button1" href="./register">Login</button></a>
+        {% endif %}
+      </div>
+    </nav>
+    <marquee width="100%" direction="left" height="100px" style="color:rgb(0, 0, 0);">
+      <img src="{% static 'Images/attention-hello.gif' %}" height="40px" width="40px">COVID-19 Appropriate behaviour -
+      Wear Mask, Physical Distancing, Maintain Hand Hygiene - Ministry of Culture
+    </marquee>
+    <div class="box-form">
+      <div class="left">
+        <div class="overlay">
+          <h1>Check Availability</h1>
+          <a href="./login">Login to Book Tickets</a>
+          <p>Don't have an account? <a href="./register">Create Your Account</a> it takes less than a minute</p>
+        </div>
+      </div>
+
+      <div class="right">
+        <h2>Search Availability for your Favourite Heritage Sites</h2>
+        <div class="inputs">
+          <input type="text" placeholder="Select State">
+          <br>
+          <input type="text" placeholder="Select Site">
+          <br><br>
+          <h4>Select your Date of Visit</h4>
+          <input type="date" placeholder="Date of Visit">
+        </div>
+
+        <br><br>
+
+        <button>Search</button>
+      </div>
+
+    </div>
+  </header>
+
+  <br> <br>
+  <footer>
+    <div class="content">
+      <div class="left box">
+        <div class="upper">
+          <div class="topic">About us</div>
+          <p>Come and take a walk at one of the world's oldest civilizations, greatest architecture & rich traditions
+            and customs of India.</p>
+        </div>
+        <div class="lower">
+          <div class="topic">Contact us</div>
+          <div class="phone">
+            <a href="#"><i class="fas fa-phone-volume"></i>+91 9000000000</a>
+          </div>
+          <div class="email">
+            <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="middle box">
+        <div class="topic">Our Services</div>
+        <div><a href="#">Ticket Booking</a></div>
+        <div><a href="#">Exploring near-by Museums</a></div>
+        <div><a href="#">QR-Based E-ticket</a></div>
+
+      </div>
+      <div class="right box">
+        <div class="topic"></div>
+        <form action="#">
+          <input type="text" placeholder="Send Feedback">
+          <input type="submit" name="" value="Send">
+          <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">
+      <p>Copyright © 2022 <a href="#">Ministry of Culture</a> All rights reserved</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Login.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Navbar.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,100&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="../" class="logo"><img src="{% static 'Images/logo.png' %}"></a>
+            <div class="nav__link hide">
+                <a href="../">home</a>
+                <a href="../about">about</a>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <form class="login">
+            <p class="title">Log in</p>
+            <input type="text" placeholder="Username" autofocus />
+            <i class="fa fa-user"></i>
+            <input type="password" placeholder="Password" />
+            <i class="fa fa-key"></i>
+            <a href="#">Forgot your password?</a>
+            <button type="submit">
+                <i class="spinner"></i>
+                <span class="state">Log in</span>
+            </button>
+        </form>
+        </p>
+    </div>
+    <script src="{% static 'js/Login.js'%}"></script>
+</body>
+
+</html>

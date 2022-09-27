@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/Navbar.css'%}">
+    <link rel="stylesheet" href="{% static 'css/NGMA.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Footer.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>National Gallery of Modern Art</title>
+    <style>
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+
+        .button1:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="" class="logo">museum</a>
+            <div class="nav__link hide">
+                <a href="../">home</a>
+                {% if user.is_authenticated %}
+                <a href="../services">services</a>
+                <a class="button button1" href="../logout">Logout</button></a>
+                {% else %}
+                <a class="button button1" href="../register">Login</button></a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Verdana, sans-serif;
+            }
+
+            .mySlides {
+                display: none;
+            }
+
+            img {
+                vertical-align: middle;
+            }
+
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Caption text */
+            .text {
+                color: #f2f2f2;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active {
+                background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {
+                    opacity: .4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+
+            @keyframes fade {
+                from {
+                    opacity: .4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .text {
+                    font-size: 11px
+                }
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <center>
+            <h1>NATIONAL GALLERY OF MODERN ARTS</h1>
+        </center>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="{% static 'Images/NGMA1.jpg' %}" style="width:100%; height:500px">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="{% static 'Images/NGMA2.jpg' %}" style="width:100%; height:500px">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="{% static 'Images/NGMA3.jpg' %}" style="width:100%; height:500px">
+                <div class="text">Caption Three</div>
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <p>A paradise for art lovers, National Gallery of Modern Art (NGMA), Mumbai is a famous art museum possessing a
+            magnificent collection of paintings, sculptures and artefacts since 1996. The multitude of artwork present
+            in this
+            charismatic gallery has drawn millions of visitors and left them awestruck. It is governed by the Department
+            of
+            Culture, Government of India and has over the period become a popular tourist attraction as it very
+            convincingly
+            depicts the modification of artwork in the field of visual and plastic arts. A blend of art and culture,
+            this
+            gallery houses the artworks of phenomenal sculptors, artists and painters including the legendary Pablo
+            Picasso
+            who is considered as the epitome of art and painting. The oldest artwork is known to be around 160 years
+            old. The
+            ancient artefacts such as statues and mummies from Egypt have also a played a crucial role in rousing the
+            curiosity of the visitors.
+
+            The National Gallery of Modern Art also organises various art exhibitions which provide an intriguing
+            platform to
+            both the artists and the art lovers as the artists get a remarkable opportunity to showcase their talent
+            while the
+            art lovers can explore and quench their thirst for art. The gallery is located near Regal Cinemas in Colaba,
+            South
+            Mumbai. It showcases some of the oldest artworks, dating back to 1857 and is considered one of the best in
+            India.
+        </p><br>
+        <b>
+            <p><u>Address</u>: Sir Cowasji Jahangir Public Hall, Mahatma Gandhi Road, Fort, Mumbai, Maharashtra 400032
+            </p>
+        </b>
+
+
+
+        <div class="box1">
+            <h1><u>Booking Info</u></h1><br>
+            <div id="hours1">
+
+                <i class="fas fa-clock"></i>
+                <h3>Hours:<br></h3>
+                <p> Timings - 11 a.m to 6 p.m<br>
+                    Closed - Mondays & National Holidays<br></p>
+            </div>
+            <div id="entry">
+                <h3>Entry Fee:<br></h3>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kids/Students (upto 12th)</td>
+                            <td>Free (with Id card)</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>Indians</td>
+                            <td>INR 20/-</td>
+                        </tr>
+                        <tr>
+                            <td>Foreigners</td>
+                            <td>INR 500/-</td>
+                        </tr>
+                        <!-- and so on... -->
+                    </tbody>
+                </table>
+            </div>
+            <button class="book" type="button"><a href="../book">Book</button></a>
+        </div>
+        <footer>
+            <div class="content">
+                <div class="left box">
+                    <div class="upper">
+                        <div class="topic">About us</div>
+                        <p>Come and take a walk at one of the world's oldest civilizations, greatest architecture & rich
+                            traditions
+                            and customs of India.</p>
+                    </div>
+                    <div class="lower">
+                        <div class="topic">Contact us</div>
+                        <div class="phone">
+                            <a href="#"><i class="fas fa-phone-volume"></i>+91 9000000000</a>
+                        </div>
+                        <div class="email">
+                            <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle box">
+                    <div class="topic">Our Services</div>
+                    <div><a href="#">Ticket Booking</a></div>
+                    <div><a href="#">Exploring near-by Museums</a></div>
+                    <div><a href="#">QR-Based E-ticket</a></div>
+
+                </div>
+                <div class="right box">
+                    <div class="topic"></div>
+                    <form action="#">
+                        <input type="text" placeholder="Find a museum/heritage site">
+                        <input type="submit" name="" value="Send">
+                        <div class="media-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>Copyright © 2022 <a href="#">Ministry of Culture</a> All rights reserved</p>
+            </div>
+        </footer>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 4000); // Change image every 4 seconds
+            }
+        </script>
+
+
+
+
+
+
+    </body>
+
+    </html>
